@@ -1,4 +1,4 @@
-let randomNumber = ~~(Math.random()*100 + 1); //parseInt can also be used
+let randomNumber = parseInt(Math.random()*100 + 1); 
 console.log(randomNumber);
 
 const numInput = document.querySelector('#guessField')
@@ -48,7 +48,7 @@ function validateGuess(guess){
 }
 
 function checkGuess(guess){
-    if(guess === randomNumber){
+    if(guess == randomNumber){
         displayMessage('You guessed correct! GG')
         endGame()
     }
